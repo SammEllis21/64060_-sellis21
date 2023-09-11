@@ -1,0 +1,90 @@
+---
+title: "Assignment 1"
+output: html_document
+date: "2023-09-11"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+Descriptive Statistics
+
+summary(Motor_Vehicle_Collisions_Person)
+UNIQUE_ID         COLLISION_ID       CRASH_DATE                       CRASH_TIME                    
+Min.   :   79954   Min.   :     44   Min.   :2012-07-01 00:00:00.00   Min.   :1899-12-31 00:00:00.00  
+1st Qu.: 6518466   1st Qu.:3567048   1st Qu.:2016-11-18 00:00:00.00   1st Qu.:1899-12-31 09:50:00.00  
+Median : 7456603   Median :3793894   Median :2017-11-13 00:00:00.00   Median :1899-12-31 14:30:00.00  
+Mean   : 7661464   Mean   :3708883   Mean   :2017-10-29 16:24:35.81   Mean   :1899-12-31 13:42:24.13  
+3rd Qu.: 9403276   3rd Qu.:4029329   3rd Qu.:2018-11-17 00:00:00.00   3rd Qu.:1899-12-31 17:59:00.00  
+Max.   :12712120   Max.   :4655719   Max.   :2023-08-17 00:00:00.00   Max.   :1899-12-31 23:59:00.00  
+
+PERSON_ID         PERSON_TYPE        PERSON_INJURY        VEHICLE_ID         PERSON_AGE        EJECTION        
+Length:1048575     Length:1048575     Length:1048575     Min.   :  602947   Min.   :-999.00   Length:1048575    
+Class :character   Class :character   Class :character   1st Qu.:17345636   1st Qu.:  22.00   Class :character  
+Mode  :character   Mode  :character   Mode  :character   Median :17793204   Median :  34.00   Mode  :character  
+Mean   :17813143   Mean   :  35.97                     
+3rd Qu.:18737042   3rd Qu.:  50.00                     
+Max.   :20499211   Max.   :9999.00                     
+NA's   :61639      NA's   :84750                       
+EMOTIONAL_STATUS   BODILY_INJURY      POSITION_IN_VEHICLE SAFETY_EQUIPMENT   PED_LOCATION        PED_ACTION       
+Length:1048575     Length:1048575     Length:1048575      Length:1048575     Length:1048575     Length:1048575    
+Class :character   Class :character   Class :character    Class :character   Class :character   Class :character  
+Mode  :character   Mode  :character   Mode  :character    Mode  :character   Mode  :character   Mode  :character  
+
+
+
+
+COMPLAINT           PED_ROLE         CONTRIBUTING_FACTOR_1 CONTRIBUTING_FACTOR_2  PERSON_SEX       
+Length:1048575     Length:1048575     Length:1048575        Length:1048575        Length:1048575    
+Class :character   Class :character   Class :character      Class :character      Class :character  
+Mode  :character   Mode  :character   Mode  :character      Mode  :character      Mode  :character  
+
+summary(PERSON_AGE)
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+-999.00   22.00   34.00   35.97   50.00 9999.00   84750
+
+summary(CRASH_DATE)
+                      Min.                    1st Qu.                     Median                       Mean 
+"2012-07-01 00:00:00.0000" "2016-11-18 00:00:00.0000" "2017-11-13 00:00:00.0000" "2017-10-29 16:24:35.8223" 
+                   3rd Qu.                       Max. 
+"2018-11-17 00:00:00.0000" "2023-08-17 00:00:00.0000" 
+
+ 
+                     summary(CRASH_TIME) Min.                    1st Qu.                     Median                       Mean 
+"1899-12-31 00:00:00.0000" "1899-12-31 09:50:00.0000" "1899-12-31 14:30:00.0000" "1899-12-31 13:42:24.1410" 
+                   3rd Qu.                       Max. 
+"1899-12-31 17:59:00.0000" "1899-12-31 23:59:00.0000" 
+
+
+Count of Sex
+ F      M      U 
+276971 541572  91431 
+
+Count of Person Injury
+Injured      Killed Unspecified 
+     125384         568      922623
+
+Count of Person Type
+Bicyclist        Occupant    Other Motorized      Pedestrian 
+   11081         1005935           24             31535 
+          
+          
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
